@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXSKILL - 次のスキルへ、次のキャリアへ</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+    <header class="bg-white shadow-md py-4">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <h1 class="text-xl font-semibold text-blue-600">NEXSKILL</h1>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#service" class="hover:text-blue-500 transition duration-300">サービス</a></li>
+                    <li><a href="#features" class="hover:text-blue-500 transition duration-300">強み</a></li>
+                    <li><a href="#coach" class="hover:text-blue-500 transition duration-300">コーチ紹介</a></li>
+                    <li><a href="#contact" class="hover:text-blue-500 transition duration-300">お問い合わせ</a></li>
+                    <li><a href="#faq" class="hover:text-blue-500 transition duration-300">よくある質問</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="bg-blue-500 hover:bg-blue-600 text-white py-3 px-6 rounded-full transition duration-300">無料相談</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-10">
+        <section class="relative h-[600px] flex items-center justify-center mb-16 overflow-hidden">
+            <div class="absolute inset-0 w-full h-full">
+                <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2340&q=80" 
+                     alt="キャリアの未来" 
+                     class="w-full h-full object-cover brightness-50">
+            </div>
+            <div class="relative z-10 text-center text-white px-4">
+                <h2 class="text-5xl font-bold mb-6">次のスキルへ、次のキャリアへ</h2>
+                <p class="text-xl mb-8">20代後半〜30代の方向けの短期集中キャリアコーチング</p>
+                <div class="space-x-4">
+                    <a href="#contact" class="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-3 px-8 rounded-full shadow-lg transition duration-300 text-lg inline-block">
+                        まずは無料相談
+                    </a>
+                    <a href="#service" class="bg-white text-gray-800 hover:bg-gray-100 py-3 px-8 rounded-full shadow-lg transition duration-300 text-lg inline-block">
+                        サービスを見る
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="service" class="mb-16">
+            <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8">サービス紹介</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">短期集中キャリアコーチング</h3>
+                    <p class="text-gray-700 mb-4">2ヶ月で理想のキャリアを実現するための集中プログラム。自己分析から選考対策まで徹底サポート。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">オンラインスキルアッププログラム</h3>
+                    <p class="text-gray-700 mb-4">キャリアアップに必要なスキルを効率的に習得。実践的なオンライン教材と個別指導。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-4">転職サポートサービス</h3>
+                    <p class="text-gray-700 mb-4">非公開求人のご紹介から、面接対策、条件交渉まで、あなたの転職活動を全面的にバックアップ。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="bg-blue-100 py-16 rounded-lg shadow-md mb-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-blue-700 text-center mb-8">NEXSKILLの強み</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex items-center">
+                        <span class="mr-4 text-green-500 text-3xl font-bold">95%</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">転職成功率95%以上</h3>
+                            <p class="text-gray-600">豊富な実績とノウハウで、あなたの転職を成功に導きます。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex items-center">
+                        <span class="mr-4 text-indigo-500 text-3xl font-bold">1on1</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">現役プロフェッショナルによるマンツーマン指導</h3>
+                            <p class="text-gray-600">各業界のプロフェッショナルが、あなたのキャリアプランを индивидуальноサポート。</p>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300 flex items-center">
+                        <span class="mr-4 text-yellow-500 text-3xl font-bold">最適化</span>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800">個別最適化されたカリキュラム</h3>
+                            <p class="text-gray-600">あなたの経験や目標に合わせて、最適な学習プランをご提供します。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="coach" class="mb-16">
+            <h2 class="text-3xl font-semibold text-gray-800 text-center mb-8">コーチ紹介</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="田中太郎のプロフィール写真" class="rounded-full w-48 h-48 object-cover mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">田中 太郎</h3>
+                    <p class="text-gray-700 text-center mb-4">IT業界専門キャリアコンサルタント</p>
+                    <p class="text-gray-600">10年以上の業界経験を持ち、多数のキャリアチェンジを成功に導いてきました。あなたのIT業界への転職を徹底サポートします。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="佐藤花子のプロフィール写真" class="rounded-full w-48 h-48 object-cover mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">佐藤 花子</h3>
+                    <p class="text-gray-700 text-center mb-4">女性キャリア専門コーチ</p>
+                    <p class="text-gray-600">女性のキャリアアップを支援するエキスパート。あなたのライフスタイルに合わせた最適なキャリアプランを一緒に考えます。</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition duration-300">
+                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=400&q=80" alt="鈴木一郎のプロフィール写真" class="rounded-full w-48 h-48 object-cover mb-4 mx-auto">
+                    <h3 class="text-xl font-semibold text-blue-600 mb-2 text-center">鈴木 一郎</h3>
+                    <p class="text-gray-700 text-center mb-4">エグゼクティブキャリアコーチ</p>
+                    <p class="text-gray-600">豊富な人脈と経験で、エグゼクティブ層のキャリア戦略をサポート。あなたのキャリアを次のレベルへと導きます。</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="bg-blue-100 py-16 rounded-lg shadow-md mb-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-semibold text-blue-700 text-center mb-8">よくある質問</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Q. サービスの流れを教えてください。</h3>
+                        <p class="text-gray-600 mb-4">A. まずは無料相談にお申し込みいただき、あなたのキャリア goalsや現状についてお伺いします。その後、最適なプランをご提案し、コーチングセッションを開始します。詳細な流れはこちらをご覧ください。</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Q. 料金体系はどうなっていますか？</h3>
+                        <p class="text-gray-600 mb-4">A. 料金はプランによって異なります。短期集中キャリアコーチングは〇〇円、オンラインスキルアッププログラムは〇〇円からです。詳細はこちらの料金ページをご確認ください。</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Q. どんなスキルが身につきますか？</h3>
+                        <p class="text-gray-600 mb-4">A. キャリアアップに必要なスキルは多岐にわたりますが、当サービスでは、コミュニケーション能力、リーダーシップ、問題解決能力など、市場価値の高いスキルを中心に習得を目指します。具体的なスキル一覧はこちらをご覧ください。</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Q. サポート体制について教えてください。</h3>
+                        <p class="text-gray-600 mb-4">A. 受講期間中は、担当コーチが ваш индивидуальныйにサポートします。 чатやメールでの相談はもちろん、必要に応じてオンライン面談も可能です。万全のサポート体制であなたのキャリアアップを支援します。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-white py-16 rounded-lg shadow-md mb-16">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-3xl font-semibold text-gray-800 mb-8">お問い合わせ</h2>
+                <p class="text-gray-600 mb-8">お気軽にご相談ください。専門のキャリアコンサルタントが ваш индивидуальныйにサポートいたします。</p>
+                <a href="#" class="bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white py-3 px-8 rounded-full shadow-lg transition duration-300 text-lg">
+                    無料相談はこちら
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto px-4 text-center">
+            <p>© 2023 NEXSKILL. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
