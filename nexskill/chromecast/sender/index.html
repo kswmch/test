@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>キャストコントロール</title>
+  <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    button {
+      font-size: 24px;
+      padding: 16px 32px;
+      background: #e53935;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>キャスト操作</h1>
+  <button onclick="launchApp()">おしまいメッセージを送る</button>
+
+  <script>
+    const appId = 'YOUR_APP_ID_HERE'; // Cast Developer Consoleで取得したIDに置き換え
+
+    function launchApp() {
+      const sessionRequest = new chrome.cast.SessionRequest(appId);
+      const apiConfig = new chrome.cast.ApiConfig(sessionRequest,
+        session => console.log('セッション開始:', session),
+        receiver => console.log('レシーバー検出:', receiver));
+
+      chrome.cast.initialize(apiConfig, () => {
+        chrome.cast.requestSession(session => {
+          console.log('キャストセッション取得', session);
+          session.loadMedia(new chrome.cast.media.MediaInfo('https://YOUR_RECEIVER_URL/index.html', 'text/html'));
+        }, err => console.error('セッション取得失敗:', err));
+      }, err => console.error('初期化失敗:', err));
+    }
+  </script>
+</body>
+</html>
