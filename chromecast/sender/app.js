@@ -35,7 +35,7 @@ function initializeCastApi() {
         castContext = cast.framework.CastContext.getInstance();
         castContext.setOptions({
             receiverApplicationId: APPLICATION_ID,
-            autoJoinPolicy: cast.framework.AutoJoinPolicy.ORIGIN_SCOPED
+            autoJoinPolicy: 'origin_scoped'
         });
 
         const endButton = document.getElementById('endButton');
