@@ -26,7 +26,7 @@
   <button onclick="launchApp()">おしまいメッセージを送る</button>
 
   <script>
-    const appId = 'YOUR_APP_ID_HERE'; // Cast Developer Consoleで取得したIDに置き換え
+    const appId = '16EAC9A7'; // Cast Developer Consoleで取得したIDに置き換え
 
     function launchApp() {
       const sessionRequest = new chrome.cast.SessionRequest(appId);
@@ -37,7 +37,7 @@
       chrome.cast.initialize(apiConfig, () => {
         chrome.cast.requestSession(session => {
           console.log('キャストセッション取得', session);
-          session.loadMedia(new chrome.cast.media.MediaInfo('https://YOUR_RECEIVER_URL/index.html', 'text/html'));
+          session.loadMedia(new chrome.cast.media.MediaInfo('https://kswmch.github.io/test/chromecast/receiver/index.html', 'text/html'));
         }, err => console.error('セッション取得失敗:', err));
       }, err => console.error('初期化失敗:', err));
     }
