@@ -53,9 +53,13 @@ button:active:not(:disabled) {
     transform: scale(0.98);
 }
 
-.google-cast-button {
-    background-color: #4285f4;
-    color: white;
+google-cast-launcher {
+    width: 32px;
+    height: 32px;
+    margin: 10px auto;
+    display: block;
+    --connected-color: #4285f4;
+    --disconnected-color: #727272;
 }
 
 .end-button {

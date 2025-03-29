@@ -4,16 +4,14 @@
     <meta charset="utf-8">
     <title>おしまいApp - Controller</title>
     <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+    <script src="https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js"></script>
 </head>
 <body>
     <div class="container">
         <h1>おしまいApp</h1>
         <div class="button-container">
-            <button id="castButton" class="google-cast-button">
-                <span class="cast-icon">📺</span>
-                キャスト開始
-            </button>
+            <google-cast-launcher id="castButton" class="google-cast-button"></google-cast-launcher>
             <button id="endButton" class="end-button" disabled>
                 <span class="stop-icon">⏹</span>
                 終了メッセージを送る
