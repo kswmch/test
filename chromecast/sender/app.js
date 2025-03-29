@@ -1,17 +1,20 @@
-// デフォルトのMedia Receiver IDを使用
-const APPLICATION_ID = 'CC1AD845';
-const DEFAULT_MEDIA_RECEIVER_APP_ID = 'CC1AD845';
+window.__onGCastApiAvailable = function(isAvailable) {
+    if (!isAvailable) {
+        console.log('Google Cast API is not available');
+        return;
+    }
 
-let castSession = null;
+    // デフォルトのMedia Receiver IDを使用
+    const APPLICATION_ID = 'CC1AD845';
 
-window.onload = function() {
     // Cast APIの初期化
-    cast.framework.CastContext.getInstance().setOptions({
-        receiverApplicationId: DEFAULT_MEDIA_RECEIVER_APP_ID,
+    const context = cast.framework.CastContext.getInstance();
+    context.setOptions({
+        receiverApplicationId: APPLICATION_ID,
         autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED
     });
 
-    const context = cast.framework.CastContext.getInstance();
+    let castSession = null;
     const endButton = document.getElementById('endButton');
     const statusElement = document.getElementById('status');
     const player = new cast.framework.RemotePlayer();
