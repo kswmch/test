@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f8ff; /* 明るい水色 */
+    color: #333;
+    font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Meiryo', 'メイリオ', sans-serif;
+    overflow: hidden; /* スクロールバーを消す */
+}
+
+.container {
+    text-align: center;
+}
+
+.message-box {
+    background-color: #fff;
+    padding: 40px 60px;
+    border-radius: 25px; /* 角を丸く */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 影をつける */
+    display: inline-block;
+}
+
+h1 {
+    font-size: 4em; /* 大きな文字サイズ */
+    color: #ff6347; /* トマト色 */
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 2.5em; /* 少し大きめの文字 */
+    color: #555;
+}
+
+/* 絵文字を少し大きく */
+p span {
+    font-size: 1.2em;
+    vertical-align: middle;
+} 

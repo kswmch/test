@@ -1,29 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="apple-mobile-web-app-title" content="おしまいApp">
-    <title>おしまいApp - Controller</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://www.gstatic.com/cast/sdk/libs/device/2.1.0/cast_framework.js"></script>
-    <script src="https://www.gstatic.com/cast/sdk/libs/sender/1.0/cast_framework.js"></script>
+    <title>Cast Timer Sender</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Cast SDK の読み込み -->
+    <script type="text/javascript" src="//www.gstatic.com/cv/js/sender/v1/cast_sender.js?loadCastFramework=1"></script>
 </head>
 <body>
-    <div class="container">
-        <h1>おしまいApp</h1>
-        <div class="button-container">
-            <google-cast-launcher id="castButton" class="google-cast-button">キャストする</google-cast-launcher>
-            <button id="endButton" class="end-button" disabled>
-                <span class="stop-icon">⏹</span>
-                キャストの画像を非表示にする
-            </button>
-        </div>
-        <div id="status" class="status">未接続</div>
-    </div>
-    <script src="app.js"></script>
+    <h1>Cast Timer</h1>
+
+    <!-- キャストボタン（SDKが自動的に表示を制御） -->
+    <google-cast-launcher></google-cast-launcher>
+
+    <button id="endButton" disabled>終了メッセージを送る</button>
+
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 

@@ -1,23 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
-    <title>おしまいApp - Receiver</title>
-    <link rel="stylesheet" href="styles.css">
-    <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
+    <title>Cast Timer Receiver</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Cast Receiver SDK の読み込み -->
+    <script src="//www.gstatic.com/cast/sdk/libs/caf_receiver/v3/cast_receiver_framework.js"></script>
 </head>
 <body>
-    <div class="message-container">
+    <div class="container">
         <div class="message-box">
             <h1>今日はおしまい！</h1>
             <p>また明日遊ぼうね 😊</p>
-            <div class="stars">
-                <span class="star">⭐</span>
-                <span class="star">⭐</span>
-                <span class="star">⭐</span>
-            </div>
         </div>
     </div>
-    <script src="app.js"></script>
+
+    <script>
+        const context = cast.framework.CastReceiverContext.getInstance();
+        const options = new cast.framework.CastReceiverOptions();
+
+        // デバッグ用ロガーレベルの設定（必要に応じて変更）
+        // cast.framework.setLoggerLevel(cast.framework.LoggerLevel.DEBUG);
+
+        // カスタムメッセージの名前空間
+        const CUSTOM_NAMESPACE = 'urn:x-cast:com.example.casttimer';
+
+        // Senderからのメッセージを受信したときの処理
+        context.addCustomMessageListener(CUSTOM_NAMESPACE, function(customEvent) {
+            console.log('Message received:', customEvent.data);
+            // 必要であればメッセージタイプに応じて表示を変えるなどの処理を追加
+            if (customEvent.data.type === 'SHOW_END_SCREEN') {
+                // すでに画面は表示されているので、ここでは特に何もしないか、
+                // アニメーションを追加するなどの演出も可能
+                console.log('Showing end screen (already displayed).');
+            }
+        });
+
+        // Receiver アプリケーションを開始
+        context.start(options).then(() => {
+            console.log('Receiver application started successfully.');
+        }).catch(error => {
+            console.error('Error starting Receiver application:', error);
+        });
+    </script>
 </body>
-</html>
+</html> 
