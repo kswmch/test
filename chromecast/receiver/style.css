@@ -1,42 +1,50 @@
 body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
+    background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f0f8ff; /* 明るい水色 */
+    min-height: 100vh;
     color: #333;
-    font-family: 'Hiragino Sans', 'ヒラギノ角ゴシック', 'Meiryo', 'メイリオ', sans-serif;
-    overflow: hidden; /* スクロールバーを消す */
 }
 
 .container {
     text-align: center;
+    padding: 2rem;
+    max-width: 800px;
+    width: 90%;
 }
 
-.message-box {
-    background-color: #fff;
-    padding: 40px 60px;
-    border-radius: 25px; /* 角を丸く */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* 影をつける */
-    display: inline-block;
+.message-container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
 }
 
 h1 {
-    font-size: 4em; /* 大きな文字サイズ */
-    color: #ff6347; /* トマト色 */
-    margin-bottom: 15px;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #ff6b6b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 p {
-    font-size: 2.5em; /* 少し大きめの文字 */
-    color: #555;
+    font-size: 2rem;
+    color: #666;
+    margin: 0;
 }
 
-/* 絵文字を少し大きく */
-p span {
-    font-size: 1.2em;
-    vertical-align: middle;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 } 
